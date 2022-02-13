@@ -3,7 +3,8 @@ package OnlineShop;
 public class Order {
 
     private String orderId;
-    private Product[] products = new Product[10];
+    private int lengthProductList;
+    private Product[] products = new Product[lengthProductList];
 
     public Order (String orderId, Product[] products) {
         this.orderId = orderId;
@@ -16,5 +17,16 @@ public class Order {
 
     public Product[] getProducts() {
         return products;
+    }
+
+    @Override
+    public String toString() {
+        String order = orderId + ": ";
+        for (int i = 0; i < products.length; i++) {
+            if (products[i] != null) {
+                order += (products[i] + ", ");
+            }
+        }
+        return order;
     }
 }

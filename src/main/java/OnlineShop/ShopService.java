@@ -10,6 +10,14 @@ public class ShopService {
         myProducts = productRepo;
     }
 
+    public void showProduct(String whatProduct) {
+
+    }
+
+    public void showAllProducts (Product[] productList) {
+
+    }
+
     public void getProduct() {
 
     }
