@@ -1,0 +1,10 @@
+.DS_Store
+.idea/.gitignore
+.idea/compiler.xml
+.idea/jarRepositories.xml
+# myIgnores
+*.iml
+target
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/misc.xml
