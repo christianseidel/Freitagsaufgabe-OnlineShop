@@ -1,24 +1,38 @@
 package OnlineShop;
 
+import java.util.Arrays;
+
 public class OrderRepo {
 
-    int lengthOrderBook = 10;
-    private Product[] orders = new Product[lengthOrderBook];
+    private final int lengthOfOrderBook = 10;
+    private Order[] orders;
 
 
-    public OrderRepo() {
-        orders = new Product[lengthOrderBook];
+    public void OrderRepo() {
+        this.orders = new Order[lengthOfOrderBook];
     }
 
-    public void list() {
-
+    public OrderRepo listAllOrders(OrderRepo allOrders) {
+        return allOrders;
     }
 
-    public void get() {
-
+    public Order[] getOrders() {
+        return orders;
     }
 
-    public void add() {
+    public Order[] add(Order plus) {
+        int i = 0;
+        while (i < lengthOfOrderBook) {
+            if (this.orders[i] != null) {
+                orders[i] = plus;
+                break;
+            }
+        }
+        return this.orders;
+    }
 
+    @Override
+    public String toString() {
+        return "OrderRepo: " + Arrays.toString(orders) + ",";
     }
 }
